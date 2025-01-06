@@ -1,5 +1,6 @@
 # ETMS-Blazor-DotNetCore9 Interactive KPI Application 
-This ETMS: Employe Traning Management System, a sample application is developed with Blazor, Blazor Componentes, .Net Core 9, Visual Studio 2022, Entity Framework Core and SQLight Data.
+
+This Employe Traning Management System (ETMS), a sample application created with Blazor, Blazor Componentes, .Net Core 9, Visual Studio 2022, Entity Framework Core, and SQLite Data.
  
 I have been developing new features, adding new components, enhancing existing components, cleaning and refactoring of code. Updates arriving soon. Please visit again
  

@@ -4,7 +4,7 @@ This ETMS: Employe Traning Management System, a sample application is developed 
 I have been developing new features, adding new components, enhancing existing components, cleaning and refactoring of code. Updates arriving soon. Please visit again
  
   
-  ## Some Application Screenshots:
+  ## Some Screenshots of this application :
  
   #### Home Screen 
 

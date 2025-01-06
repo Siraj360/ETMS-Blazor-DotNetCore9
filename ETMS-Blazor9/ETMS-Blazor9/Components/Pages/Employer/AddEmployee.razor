@@ -1,0 +1,45 @@
+﻿@page "/addemployee"
+@inject NavigationManager NavigationManager
+@inject IEmployeeService EmployeeService
+@rendermode InteractiveServer
+
+<h3>Create Employee</h3>
+
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="Name" class="control-label">Name</label>
+                <input for="Name" class="form-control" @bind="@employee.Name" />
+            </div>
+            <div class="form-group">
+                <label for="Department" class="control-label">Hire Date</label>
+                <input for="Department" class="form-control" @bind="@employee.HireDate" />
+            </div>
+        </div>
+    </div>
+    <div class="row pt-2">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="ma-1 btn btn-primary" @onclick="CreateEmployee" value="Save" />
+                <input type="button" class="ma-1 btn btn-light" @onclick="Cancel" value="Cancel" />
+            </div>
+        </div>
+    </div>
+</form>
+
+@code {
+
+    private Employee employee { get; set; } = new ();
+
+    private async Task CreateEmployee()
+    {
+        await EmployeeService.CreateEmployee(employee);
+        NavigationManager.NavigateTo("/employee-admin");
+    }
+
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("/employee-admin");
+    }
+}   

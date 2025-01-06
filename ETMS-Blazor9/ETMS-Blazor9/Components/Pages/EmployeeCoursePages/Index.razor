@@ -1,0 +1,40 @@
+﻿@page "/employeecourses"
+@using Microsoft.EntityFrameworkCore
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using ETMS.Data
+@implements IAsyncDisposable
+@inject IDbContextFactory<ETMSContext> DbFactory
+
+<PageTitle>Index</PageTitle>
+
+<h1>Index</h1>
+
+<p>
+    <a href="employeecourses/create">Create New</a>
+</p>
+
+<QuickGrid Class="table" Items="context.EmployeeCourse">
+    <PropertyColumn Property="employeecourse => employeecourse.EmployeeID" />
+    <PropertyColumn Property="employeecourse => employeecourse.CourseID" />
+    <PropertyColumn Property="employeecourse => employeecourse.isComplete" />
+    <PropertyColumn Property="employeecourse => employeecourse.CompletedOn" />
+    <PropertyColumn Property="employeecourse => employeecourse.UpdatedOn" />
+    <PropertyColumn Property="employeecourse => employeecourse.AssignedOn" />
+
+    <TemplateColumn Context="employeecourse">
+        <a href="@($"employeecourses/edit?employeecourseid={employeecourse.EmployeeCourseID}")">Edit</a> |
+        <a href="@($"employeecourses/details?employeecourseid={employeecourse.EmployeeCourseID}")">Details</a> |
+        <a href="@($"employeecourses/delete?employeecourseid={employeecourse.EmployeeCourseID}")">Delete</a>
+    </TemplateColumn>
+</QuickGrid>
+
+@code {
+    private ETMSContext context = default!;
+
+    protected override void OnInitialized()
+    {
+        context = DbFactory.CreateDbContext();
+    }
+
+    public async ValueTask DisposeAsync() => await context.DisposeAsync();
+}

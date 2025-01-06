@@ -1,0 +1,67 @@
+﻿@page "/courses/create"
+@using Microsoft.EntityFrameworkCore
+@using ETMS.Data
+@inject IDbContextFactory<ETMSContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Create Course</PageTitle>
+
+<div class="row mb-2 border-bottom">
+    <div class="col-md-8">
+        <h5>Create Course</h5>
+    </div>
+    <div class="col-md-4">
+        <a type="button" class="btn btn-dark btn-sm float-end mb-2" href="course-managment"> <span class="oi oi-arrow-thick-left me-2"></span>Back to Listing</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <EditForm method="post" Model="Course" OnValidSubmit="AddCourse" FormName="create" Enhance>
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" role="alert"/>
+            @* <div class="mb-3"> *@
+            @*     <label for="rowid" class="form-label">RowId:</label>  *@
+            @*     <InputText id="rowid" @bind-Value="Course.RowId" class="form-control" />  *@
+            @*     <ValidationMessage For="() => Course.RowId" class="text-danger" />  *@
+            @* </div>         *@
+            <div class="mb-3">
+                <label for="name" class="form-label">Name:</label> 
+                <InputText id="name" @bind-Value="Course.Name" class="form-control" /> 
+                <ValidationMessage For="() => Course.Name" class="text-danger" /> 
+            </div>        
+            <div class="mb-3">
+                <label for="code" class="form-label">Code:</label> 
+                <InputText id="code" @bind-Value="Course.Code" class="form-control" /> 
+                <ValidationMessage For="() => Course.Code" class="text-danger" /> 
+            </div>        
+            <div class="mb-3">
+                <label for="description" class="form-label">Description:</label> 
+                <InputTextArea id="description" @bind-Value="Course.Description" class="form-control" /> 
+                <ValidationMessage For="() => Course.Description" class="text-danger" /> 
+            </div>        
+            @* <div class="mb-3"> *@
+            @*     <label for="iscompleted" class="form-label">IsCompleted:</label>  *@
+            @*     <InputCheckbox id="iscompleted" @bind-Value="Course.IsCompleted" class="form-check-input" />  *@
+            @*     <ValidationMessage For="() => Course.IsCompleted" class="text-danger" />  *@
+            @* </div>         *@
+            <button type="submit" class="btn btn-primary">Create</button>
+        </EditForm>
+    </div>
+</div>
+
+
+
+@code {
+    [SupplyParameterFromForm]
+    private Course Course { get; set; } = new();
+
+    // To protect from overposting attacks, see https://learn.microsoft.com/aspnet/core/blazor/forms/#mitigate-overposting-attacks.
+    private async Task AddCourse()
+    {
+        Course.RowId = Guid.NewGuid().ToString();
+        using var context = DbFactory.CreateDbContext();
+        context.Course.Add(Course);
+        await context.SaveChangesAsync();
+        NavigationManager.NavigateTo("/course-managment");
+    }
+}

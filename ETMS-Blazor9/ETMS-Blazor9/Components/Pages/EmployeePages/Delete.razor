@@ -1,0 +1,73 @@
+﻿@page "/employees/delete"
+@using Microsoft.EntityFrameworkCore
+@using ETMS.Data
+@inject IDbContextFactory<ETMSContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Delete Employee</PageTitle>
+
+<div class="row mb-2 border-bottom">
+    <div class="col-md-8">
+        <h5>Delete Employee</h5>
+    </div>
+    <div class="col-md-4">
+        <a type="button" class="btn btn-dark btn-sm float-end mb-2" href="employee-admin"><span class="oi oi-arrow-thick-left me-2"></span>Back to Listing</a>
+    </div>
+</div>
+
+
+<div class="alert alert-danger" role="alert">
+    Are you sure you want to delete this?
+</div>
+
+<div>
+
+    @if (employee is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else {
+        <dl class="row">
+            <dt class="col-sm-2">EmployeeID</dt>
+            <dd class="col-sm-10">@employee.EmployeeID</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Name</dt>
+            <dd class="col-sm-10">@employee.Name</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">HireDate</dt>
+            <dd class="col-sm-10">@employee.HireDate</dd>
+        </dl>
+
+        <EditForm method="post" Model="employee" OnValidSubmit="DeleteEmployee" FormName="delete" Enhance>
+            <button type="submit" class="btn btn-danger" disabled="@(employee is null)">Delete</button> 
+        </EditForm>
+    }
+</div>
+
+@code {
+    private Employee? employee;
+
+    [SupplyParameterFromQuery]
+    private int EmployeeID { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        employee = await context.Employee.FirstOrDefaultAsync(m => m.EmployeeID == EmployeeID);
+
+        if (employee is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+
+    private async Task DeleteEmployee()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Employee.Remove(employee!);
+        await context.SaveChangesAsync();
+        NavigationManager.NavigateTo("/employee-admin");
+    }
+}

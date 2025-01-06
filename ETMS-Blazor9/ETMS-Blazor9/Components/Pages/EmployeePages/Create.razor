@@ -1,0 +1,62 @@
+﻿@page "/employees/create"
+@using Microsoft.EntityFrameworkCore
+@using ETMS.Data
+@inject IDbContextFactory<ETMSContext> DbFactory
+@inject NavigationManager NavigationManager
+
+
+<PageTitle>Create Employee</PageTitle>
+
+
+<div class="row mb-2 border-bottom">
+    <div class="col-md-8">
+        <h5>Create Employee</h5>
+    </div>
+    <div class="col-md-4">
+        <a type="button" class="btn btn-dark btn-sm float-end mb-2" href="employee-admin"><span class="oi oi-arrow-thick-left me-2"></span>Back to Listing</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <EditForm method="post" Model="Employee" OnValidSubmit="AddEmployee" FormName="create" Enhance>
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" role="alert"/>
+            @* <div class="mb-3"> *@
+            @*     <label for="rowid" class="form-label">RowId:</label>  *@
+            @*     <InputText id="rowid" @bind-Value="Employee.RowId" class="form-control" />  *@
+            @*     <ValidationMessage For="() => Employee.RowId" class="text-danger" />  *@
+            @* </div>         *@
+
+            <div class="mb-3">
+                <label for="name" class="form-label">Name:</label>
+                <InputText id="name" @bind-Value="Employee.Name" class="form-control" />
+                <ValidationMessage For="() => Employee.Name" class="text-danger" />
+            </div>
+            <div class="mb-3">
+                <label for="hiredate" class="form-label">HireDate:</label> 
+                <InputDate id="hiredate" @bind-Value="Employee.HireDate" class="form-control" /> 
+                <ValidationMessage For="() => Employee.HireDate" class="text-danger" /> 
+            </div>        
+        
+            <button type="submit" class="btn btn-primary">Create</button>
+        </EditForm>
+    </div>
+</div>
+
+
+
+@code {
+    [SupplyParameterFromForm]
+    private Employee Employee { get; set; } = new();
+
+    // To protect from overposting attacks, see https://learn.microsoft.com/aspnet/core/blazor/forms/#mitigate-overposting-attacks.
+    private async Task AddEmployee()
+    {
+        using var context = DbFactory.CreateDbContext();
+        Employee.RowId = Guid.NewGuid().ToString();
+        context.Employee.Add(Employee);
+        await context.SaveChangesAsync();
+        NavigationManager.NavigateTo("/employee-admin");
+    }
+}

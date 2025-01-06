@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Siraj\\source\\repos-git\\ETMS-Blazor-Core9\\ETMS-Blazor-DotNetCore9\\ETMS-Blazor9\\ETMS-Blazor9.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\Siraj\\source\\repos-git\\ETMS-Blazor-Core9\\ETMS-Blazor-DotNetCore9\\ETMS-Blazor9\\ETMS-Blazor9.Client\\wwwroot\\appsettings.Development.json",
+      "PackagePath": "staticwebassets\\appsettings.Development.json"
+    },
+    {
+      "Id": "C:\\Users\\Siraj\\source\\repos-git\\ETMS-Blazor-Core9\\ETMS-Blazor-DotNetCore9\\ETMS-Blazor9\\ETMS-Blazor9.Client\\wwwroot\\appsettings.json",
+      "PackagePath": "staticwebassets\\appsettings.json"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.ETMS-Blazor9.Client.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.ETMS-Blazor9.Client.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.ETMS-Blazor9.Client.props",
+      "PackagePath": "build\\ETMS-Blazor9.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.ETMS-Blazor9.Client.props",
+      "PackagePath": "buildMultiTargeting\\ETMS-Blazor9.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.ETMS-Blazor9.Client.props",
+      "PackagePath": "buildTransitive\\ETMS-Blazor9.Client.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

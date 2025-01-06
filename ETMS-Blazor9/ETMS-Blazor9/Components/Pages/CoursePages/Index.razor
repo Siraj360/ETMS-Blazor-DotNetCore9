@@ -1,0 +1,43 @@
+﻿@page "/course-managment"
+@using Microsoft.EntityFrameworkCore
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using ETMS.Data
+@implements IAsyncDisposable
+@inject IDbContextFactory<ETMSContext> DbFactory
+
+<PageTitle>Course Managment</PageTitle>
+
+<div class="row border-bottom mb-2 py-1">
+    <div class="col-md-8 ">
+        <h4>Course Managment</h4>
+    </div>
+    <div class="col-md-4">
+        <a class="btn btn-dark btn-sm float-end mb-2" href="courses/create"> <span class="oi oi-plus me-2"></span> Create New Course</a>
+    </div>
+</div>
+
+
+<QuickGrid Class="table" Items="context.Course">
+    <PropertyColumn Property="course => course.CourseID" />
+    <PropertyColumn Property="course => course.Name" />
+    <PropertyColumn Property="course => course.Code" />
+    @* <PropertyColumn Property="course => course.Description" /> *@
+    @* <PropertyColumn Property="course => course.IsCompleted" /> *@
+
+    <TemplateColumn Context="course">
+        <a class="btn btn-sm btn-primary me-2" href="@($"courses/edit?courseid={course.CourseID}")"><span class="oi oi-pencil me-2"></span>Edit</a>
+        @* <a href="@($"courses/details?courseid={course.CourseID}")">Details</a> | *@
+        <a class="btn btn-sm btn-danger" href="@($"courses/delete?courseid={course.CourseID}")"><span class="oi oi-trash me-2"></span>Delete</a>
+    </TemplateColumn>
+</QuickGrid>
+
+@code {
+    private ETMSContext context = default!;
+
+    protected override void OnInitialized()
+    {
+        context = DbFactory.CreateDbContext();
+    }
+
+    public async ValueTask DisposeAsync() => await context.DisposeAsync();
+}

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ETMS-Blazor9.Client.props" />
+</Project>

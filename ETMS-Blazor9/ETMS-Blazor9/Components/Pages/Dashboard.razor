@@ -1,0 +1,155 @@
+﻿@page "/dashboard"
+@using Microsoft.EntityFrameworkCore
+@using ETMS.Data
+@inject IDbContextFactory<ETMSContext> DbFactory
+@inject IEmployeeCourseService EmployeeCourseService
+@using ETMS_Blazor9.Components.shared
+@rendermode InteractiveServer
+
+@code{
+    int ix = 1;
+}
+
+<PageTitle>ETMS : Employee Training Management System</PageTitle>
+
+<div class="row mb-2 border-bottom my-2">
+    <div class="col-md-8">
+        <h4>ETMS : Employee Training Management System</h4>
+    </div>
+    <div class="col-md-4">
+        @*  <a type="button" class="btn btn-dark btn-sm float-right" href="/addemployee">Create New Employee</a>*@
+    </div>
+</div>
+
+
+<div class="row">
+    <Status number="@statusInfo.TotalEmployeeCourses" type="chart-line" colour="primary" comments=@text1  linkto="listemployees" />
+    <Status number="@statusInfo.EmployeeAllComplterd" type="smile" colour="success" comments=@text2 linkto="listemployees" />
+    <Status number="@statusInfo.EmployeeAllNotStarted" type="exclamation-circle" colour="danger" comments=@text3 linkto="listcourses" />
+    <Status number="@statusInfo.TotalCourses" type="bicycle" colour="warning" comments="Total courses wich are assigned to employee." linkto="listcourses" />
+
+</div>
+<br />
+
+@if (employeesCourseInfoList == null)
+{
+    <Loader/>
+}
+else
+{
+    string tdClass = "";
+
+    <table class='table table-sm table-bordered table-striped table-hover shadow'>
+        <thead>
+            <tr>
+                @* <th scope="col" class="text-center table-warning">#</th> *@
+                <th colspan="4" class="text-center table-warning" scope="col">Employee</th>
+                @* <th scope="col" class="text-center table-warning">?</th> *@
+                <th colspan="2" class="text-center table-secondary" scope="col">Training Course</th>
+                @*<th scope="col" class="text-center">Complet </th>*@
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var info in employeesCourseInfoList)
+            {
+
+                tdClass = $"{(info.isComplete == true ? "table-success" : "table-danger")}"; 
+
+                <tr>
+                    <th scope="row" class="text-center">
+                        @ix
+                    </th>
+                    <td class="@info.cellCSS">@info.EmployeeInfo.Name</td>
+                    <td class="@info.cellCSS">
+                        <strong>@info.TotalEmployeeCompleted / @(info.TotalEmployeeNotStarted+info.TotalEmployeeCompleted)</strong>
+                        &nbsp;
+                        <span class="badge rounded-pill bg-warning">
+                            @info.PercentEmployeCompleted
+                        </span>
+                    </td>
+
+                    <td class="text-center @tdClass">
+                        @if (info.isComplete)
+                        {
+                            <span class="oi oi-circle-check"></span>
+                        }
+                        else
+                        {
+                            <span class="oi oi-circle-x"></span>
+                        }
+                    </td>
+                    <td>
+                        @info.CourseInfo.Code : @info.CourseInfo.Name
+                    </td>
+                    <td>
+                        <strong>    @info.TotalCourseCompleted / @(info.TotalCourseNotStarted+info.TotalCourseCompleted) </strong>
+                        &nbsp;
+                        <span class="badge rounded-pill bg-secondary">
+                            @info.PercentCourcesCompleted
+                        </span>
+                    </td>
+                </tr>
+                ix++;
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+
+
+
+    string text1;
+    string text2;
+    string text3;
+
+
+    List<EmployeeCourseInfo> employeesCourseInfoList;
+
+    StatusInfo statusInfo = new StatusInfo();
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        // employees = await context.Employee.ToListAsync();
+
+        employeesCourseInfoList = await EmployeeCourseService.GetEmployeeCourseInfoList();
+
+        List<ETMS.Data.EmployeeInfo> employeeInfoList = await EmployeeCourseService.GetEmployeeInfoList();
+        List<ETMS.Data.Course> courseList = await context.Course.ToListAsync();
+
+        statusInfo.EmployeeAllComplterd = employeeInfoList.Where(e => e.isAllCourseCompleted == true).ToList().Count();
+        statusInfo.EmployeeAllNotStarted = employeeInfoList.Where(e => e.isAllCoursePending == true).ToList().Count(); 
+        statusInfo.TotalEmployees = employeeInfoList.Count;
+        statusInfo.TotalCourses = courseList.Count;
+        statusInfo.TotalEmployeeCourses = employeesCourseInfoList.Count;
+        statusInfo.EmployeeCoursesComplted = employeesCourseInfoList.Where(e => e.isComplete == true).ToList().Count(); 
+
+        text1 = "Courses assigned to " + statusInfo.TotalEmployees + " employees.";
+
+        if (statusInfo.EmployeeAllComplterd > 0)
+        {
+            double perComplete = statusInfo.EmployeeAllComplterd * 100 / statusInfo.TotalEmployees;
+
+            text2 = "Employees has complted all courses - " + (perComplete / 100).ToString("P") + ".";
+        }else{
+            text2 = "Employees has complted all courses - 0%.";
+        }
+    ;
+        if (statusInfo.EmployeeAllNotStarted > 0)
+        {
+            double perNotStart = statusInfo.EmployeeAllNotStarted * 100 / statusInfo.TotalEmployees;
+
+            text3 = "Employees has yet not strated - " + (perNotStart / 100).ToString("P") + ".";
+        }else
+        {
+            
+            text3 = "Employees has yet not strated - 0%.";
+        }
+    }
+
+    
+}
+
+
+            <br /><br />

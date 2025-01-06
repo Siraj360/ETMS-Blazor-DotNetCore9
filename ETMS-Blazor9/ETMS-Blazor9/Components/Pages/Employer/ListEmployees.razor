@@ -1,0 +1,53 @@
+﻿@page "/employee-performance"
+@inject IEmployeeService EmployeeService
+@using ETMS_Blazor9.Components.shared
+@rendermode InteractiveServer
+@code
+{
+    int ex = 1;
+}
+
+<PageTitle>Employee Training Performance</PageTitle>
+
+<div class="row mb-2 border-bottom my-2">
+    <div class="col-md-8">
+        <h4>Employee Training Performance</h4>
+    </div>
+    <div class="col-md-4">
+        @* <a type="button" class="btn btn-dark btn-sm float-end mb-2" href="/employees/create"><span class="oi oi-plus me-2"></span>Create New Employee</a> *@
+    </div>
+</div>
+
+
+@if (employees == null)
+{
+    <Loader />
+}
+else
+{
+    <table class='table table-sm table-borderless'>
+        <tbody>
+            @foreach (var employee in employees)
+            {
+                string employeId = employee.EmployeeID.ToString();
+
+                <EmployeeInfo ex="@ex" employeeId="@employeId"></EmployeeInfo>
+                ex++;
+            }
+        </tbody>
+    </table>
+}
+
+<br />
+<br />
+
+@code {
+    List<Employee> employees;
+
+    protected override async Task OnInitializedAsync()
+    {
+        int ex = 1;
+        employees = await EmployeeService.GetEmployees();
+    }
+
+}

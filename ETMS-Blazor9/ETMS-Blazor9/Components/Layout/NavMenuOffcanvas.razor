@@ -1,0 +1,67 @@
+﻿@using Microsoft.AspNetCore.Components
+@rendermode InteractiveServer
+
+
+<style>
+  .off-canvas {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: left 0.3s;
+  }
+  .off-canvas.open {
+    left: 0;
+  }
+  .nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #444;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .content {
+    margin-left: 0;
+    transition: margin-left 0.3s;
+  }
+
+    .btn-toggle {
+        margin-left: 10px;
+        margin-top: 10px;
+        transition: margin-left 0.3s;
+    }
+
+  .content.open {
+    margin-left: 250px;
+  }
+
+    .btn-toggle.open
+    {
+        margin-left: 260px;
+        margin-top: 10px;
+    }
+</style>
+
+
+<div class=" btn-toggle btn btn-dark px-3 me-2"
+     onclick="this.nextElementSibling.classList.toggle('open'); document.querySelector('.content').classList.toggle('open'); document.querySelector('.btn-toggle').classList.toggle('open');">
+  <i class="fa-solid fa-bars"></i>
+</div>
+
+<div class="off-canvas">
+  <ul>
+    <li>Home</li>
+    <li>About</li>
+    <li>Contact</li>
+  </ul>
+</div>
+
+@* <div class="content"> *@
+@*   <h1>Main Content</h1> *@
+@*   <p>This is the main content area of the page.</p> *@
+@* </div> *@

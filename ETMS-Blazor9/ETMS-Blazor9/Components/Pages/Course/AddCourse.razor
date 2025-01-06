@@ -1,0 +1,50 @@
+﻿@page "/addcourse"
+@inject NavigationManager NavigationManager
+@inject ICourseService CourseService
+@rendermode InteractiveServer
+
+<h3>Create Course</h3>
+
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="Name" class="control-label">Name</label>
+                <input for="Name" class="form-control" @bind="@course.Name" />
+            </div>
+            <div class="form-group">
+                <label for="Department" class="control-label">Code</label>
+                <input for="Department" class="form-control" @bind="@course.Code" />
+            </div>
+            <div class="form-group">
+                <label for="Designation" class="control-label">Designation</label>
+                <textarea for="Designation" class="form-control" @bind="@course.Description" />
+            </div>
+           
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="ma-1 btn btn-primary" @onclick="CreateCourse" value="Save" />
+                <input type="button" class="ma-1 btn btn-light" @onclick="Cancel" value="Cancel" />
+            </div>
+        </div>
+    </div>
+</form>
+
+@code {
+
+    Course course = new Course();
+
+    protected async Task CreateCourse()
+    {
+        await CourseService.CreateCourse(course);
+        NavigationManager.NavigateTo("courses");
+    }
+
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("courses");
+    }
+}   

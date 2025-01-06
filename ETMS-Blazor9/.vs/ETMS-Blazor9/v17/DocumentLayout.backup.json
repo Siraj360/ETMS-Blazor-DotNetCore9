@@ -1,0 +1,185 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Siraj\\source\\repos-git\\ETMS-Blazor-Core9\\ETMS-Blazor-DotNetCore9\\ETMS-Blazor9\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAC2780-13F1-4502-AD20-C58FBF0947ED}|ETMS-Blazor9\\ETMS-Blazor9.csproj|c:\\users\\siraj\\source\\repos-git\\etms-blazor-core9\\etms-blazor-dotnetcore9\\etms-blazor9\\etms-blazor9\\components\\shared\\imagegallery.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1BAC2780-13F1-4502-AD20-C58FBF0947ED}|ETMS-Blazor9\\ETMS-Blazor9.csproj|solutionrelative:etms-blazor9\\components\\shared\\imagegallery.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAC2780-13F1-4502-AD20-C58FBF0947ED}|ETMS-Blazor9\\ETMS-Blazor9.csproj|c:\\users\\siraj\\source\\repos-git\\etms-blazor-core9\\etms-blazor-dotnetcore9\\etms-blazor9\\etms-blazor9\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1BAC2780-13F1-4502-AD20-C58FBF0947ED}|ETMS-Blazor9\\ETMS-Blazor9.csproj|solutionrelative:etms-blazor9\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAC2780-13F1-4502-AD20-C58FBF0947ED}|ETMS-Blazor9\\ETMS-Blazor9.csproj|c:\\users\\siraj\\source\\repos-git\\etms-blazor-core9\\etms-blazor-dotnetcore9\\etms-blazor9\\etms-blazor9\\components\\pages\\employeepages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1BAC2780-13F1-4502-AD20-C58FBF0947ED}|ETMS-Blazor9\\ETMS-Blazor9.csproj|solutionrelative:etms-blazor9\\components\\pages\\employeepages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAC2780-13F1-4502-AD20-C58FBF0947ED}|ETMS-Blazor9\\ETMS-Blazor9.csproj|c:\\users\\siraj\\source\\repos-git\\etms-blazor-core9\\etms-blazor-dotnetcore9\\etms-blazor9\\etms-blazor9\\components\\pages\\employeepages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1BAC2780-13F1-4502-AD20-C58FBF0947ED}|ETMS-Blazor9\\ETMS-Blazor9.csproj|solutionrelative:etms-blazor9\\components\\pages\\employeepages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAC2780-13F1-4502-AD20-C58FBF0947ED}|ETMS-Blazor9\\ETMS-Blazor9.csproj|c:\\users\\siraj\\source\\repos-git\\etms-blazor-core9\\etms-blazor-dotnetcore9\\etms-blazor9\\etms-blazor9\\components\\pages\\employeepages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1BAC2780-13F1-4502-AD20-C58FBF0947ED}|ETMS-Blazor9\\ETMS-Blazor9.csproj|solutionrelative:etms-blazor9\\components\\pages\\employeepages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAC2780-13F1-4502-AD20-C58FBF0947ED}|ETMS-Blazor9\\ETMS-Blazor9.csproj|c:\\users\\siraj\\source\\repos-git\\etms-blazor-core9\\etms-blazor-dotnetcore9\\etms-blazor9\\etms-blazor9\\components\\pages\\coursepages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1BAC2780-13F1-4502-AD20-C58FBF0947ED}|ETMS-Blazor9\\ETMS-Blazor9.csproj|solutionrelative:etms-blazor9\\components\\pages\\coursepages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAC2780-13F1-4502-AD20-C58FBF0947ED}|ETMS-Blazor9\\ETMS-Blazor9.csproj|c:\\users\\siraj\\source\\repos-git\\etms-blazor-core9\\etms-blazor-dotnetcore9\\etms-blazor9\\etms-blazor9\\components\\pages\\coursepages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1BAC2780-13F1-4502-AD20-C58FBF0947ED}|ETMS-Blazor9\\ETMS-Blazor9.csproj|solutionrelative:etms-blazor9\\components\\pages\\coursepages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAC2780-13F1-4502-AD20-C58FBF0947ED}|ETMS-Blazor9\\ETMS-Blazor9.csproj|c:\\users\\siraj\\source\\repos-git\\etms-blazor-core9\\etms-blazor-dotnetcore9\\etms-blazor9\\etms-blazor9\\components\\pages\\coursepages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1BAC2780-13F1-4502-AD20-C58FBF0947ED}|ETMS-Blazor9\\ETMS-Blazor9.csproj|solutionrelative:etms-blazor9\\components\\pages\\coursepages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAC2780-13F1-4502-AD20-C58FBF0947ED}|ETMS-Blazor9\\ETMS-Blazor9.csproj|c:\\users\\siraj\\source\\repos-git\\etms-blazor-core9\\etms-blazor-dotnetcore9\\etms-blazor9\\etms-blazor9\\components\\pages\\coursepages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1BAC2780-13F1-4502-AD20-C58FBF0947ED}|ETMS-Blazor9\\ETMS-Blazor9.csproj|solutionrelative:etms-blazor9\\components\\pages\\coursepages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAC2780-13F1-4502-AD20-C58FBF0947ED}|ETMS-Blazor9\\ETMS-Blazor9.csproj|c:\\users\\siraj\\source\\repos-git\\etms-blazor-core9\\etms-blazor-dotnetcore9\\etms-blazor9\\etms-blazor9\\components\\pages\\coursepages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1BAC2780-13F1-4502-AD20-C58FBF0947ED}|ETMS-Blazor9\\ETMS-Blazor9.csproj|solutionrelative:etms-blazor9\\components\\pages\\coursepages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 144,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\Siraj\\source\\repos-git\\ETMS-Blazor-Core9\\ETMS-Blazor-DotNetCore9\\ETMS-Blazor9\\ETMS-Blazor9\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "ETMS-Blazor9\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\Siraj\\source\\repos-git\\ETMS-Blazor-Core9\\ETMS-Blazor-DotNetCore9\\ETMS-Blazor9\\ETMS-Blazor9\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "ETMS-Blazor9\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAABIAAAAAAAAAAADgvxEAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-06T02:20:20.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ImageGallery.razor",
+              "DocumentMoniker": "C:\\Users\\Siraj\\source\\repos-git\\ETMS-Blazor-Core9\\ETMS-Blazor-DotNetCore9\\ETMS-Blazor9\\ETMS-Blazor9\\Components\\shared\\ImageGallery.razor",
+              "RelativeDocumentMoniker": "ETMS-Blazor9\\Components\\shared\\ImageGallery.razor",
+              "ToolTip": "C:\\Users\\Siraj\\source\\repos-git\\ETMS-Blazor-Core9\\ETMS-Blazor-DotNetCore9\\ETMS-Blazor9\\ETMS-Blazor9\\Components\\shared\\ImageGallery.razor",
+              "RelativeToolTip": "ETMS-Blazor9\\Components\\shared\\ImageGallery.razor",
+              "ViewState": "AgIAADkAAAAAAAAAAADgv0AAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-06T00:12:55.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Delete.razor",
+              "DocumentMoniker": "C:\\Users\\Siraj\\source\\repos-git\\ETMS-Blazor-Core9\\ETMS-Blazor-DotNetCore9\\ETMS-Blazor9\\ETMS-Blazor9\\Components\\Pages\\EmployeePages\\Delete.razor",
+              "RelativeDocumentMoniker": "ETMS-Blazor9\\Components\\Pages\\EmployeePages\\Delete.razor",
+              "ToolTip": "C:\\Users\\Siraj\\source\\repos-git\\ETMS-Blazor-Core9\\ETMS-Blazor-DotNetCore9\\ETMS-Blazor9\\ETMS-Blazor9\\Components\\Pages\\EmployeePages\\Delete.razor",
+              "RelativeToolTip": "ETMS-Blazor9\\Components\\Pages\\EmployeePages\\Delete.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAawAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-05T23:06:42.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.razor",
+              "DocumentMoniker": "C:\\Users\\Siraj\\source\\repos-git\\ETMS-Blazor-Core9\\ETMS-Blazor-DotNetCore9\\ETMS-Blazor9\\ETMS-Blazor9\\Components\\Pages\\EmployeePages\\Create.razor",
+              "RelativeDocumentMoniker": "ETMS-Blazor9\\Components\\Pages\\EmployeePages\\Create.razor",
+              "ToolTip": "C:\\Users\\Siraj\\source\\repos-git\\ETMS-Blazor-Core9\\ETMS-Blazor-DotNetCore9\\ETMS-Blazor9\\ETMS-Blazor9\\Components\\Pages\\EmployeePages\\Create.razor",
+              "RelativeToolTip": "ETMS-Blazor9\\Components\\Pages\\EmployeePages\\Create.razor",
+              "ViewState": "AgIAADMAAAAAwocFM8YRwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-05T23:06:35.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Edit.razor",
+              "DocumentMoniker": "C:\\Users\\Siraj\\source\\repos-git\\ETMS-Blazor-Core9\\ETMS-Blazor-DotNetCore9\\ETMS-Blazor9\\ETMS-Blazor9\\Components\\Pages\\EmployeePages\\Edit.razor",
+              "RelativeDocumentMoniker": "ETMS-Blazor9\\Components\\Pages\\EmployeePages\\Edit.razor",
+              "ToolTip": "C:\\Users\\Siraj\\source\\repos-git\\ETMS-Blazor-Core9\\ETMS-Blazor-DotNetCore9\\ETMS-Blazor9\\ETMS-Blazor9\\Components\\Pages\\EmployeePages\\Edit.razor",
+              "RelativeToolTip": "ETMS-Blazor9\\Components\\Pages\\EmployeePages\\Edit.razor",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAawA4AAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-05T23:06:18.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.razor",
+              "DocumentMoniker": "C:\\Users\\Siraj\\source\\repos-git\\ETMS-Blazor-Core9\\ETMS-Blazor-DotNetCore9\\ETMS-Blazor9\\ETMS-Blazor9\\Components\\Pages\\CoursePages\\Create.razor",
+              "RelativeDocumentMoniker": "ETMS-Blazor9\\Components\\Pages\\CoursePages\\Create.razor",
+              "ToolTip": "C:\\Users\\Siraj\\source\\repos-git\\ETMS-Blazor-Core9\\ETMS-Blazor-DotNetCore9\\ETMS-Blazor9\\ETMS-Blazor9\\Components\\Pages\\CoursePages\\Create.razor",
+              "RelativeToolTip": "ETMS-Blazor9\\Components\\Pages\\CoursePages\\Create.razor",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAawEAAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-05T23:05:43.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Delete.razor",
+              "DocumentMoniker": "C:\\Users\\Siraj\\source\\repos-git\\ETMS-Blazor-Core9\\ETMS-Blazor-DotNetCore9\\ETMS-Blazor9\\ETMS-Blazor9\\Components\\Pages\\CoursePages\\Delete.razor",
+              "RelativeDocumentMoniker": "ETMS-Blazor9\\Components\\Pages\\CoursePages\\Delete.razor",
+              "ToolTip": "C:\\Users\\Siraj\\source\\repos-git\\ETMS-Blazor-Core9\\ETMS-Blazor-DotNetCore9\\ETMS-Blazor9\\ETMS-Blazor9\\Components\\Pages\\CoursePages\\Delete.razor",
+              "RelativeToolTip": "ETMS-Blazor9\\Components\\Pages\\CoursePages\\Delete.razor",
+              "ViewState": "AgIAADcAAAAAAAAAAAAawEwAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-05T23:05:19.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Details.razor",
+              "DocumentMoniker": "C:\\Users\\Siraj\\source\\repos-git\\ETMS-Blazor-Core9\\ETMS-Blazor-DotNetCore9\\ETMS-Blazor9\\ETMS-Blazor9\\Components\\Pages\\CoursePages\\Details.razor",
+              "RelativeDocumentMoniker": "ETMS-Blazor9\\Components\\Pages\\CoursePages\\Details.razor",
+              "ToolTip": "C:\\Users\\Siraj\\source\\repos-git\\ETMS-Blazor-Core9\\ETMS-Blazor-DotNetCore9\\ETMS-Blazor9\\ETMS-Blazor9\\Components\\Pages\\CoursePages\\Details.razor",
+              "RelativeToolTip": "ETMS-Blazor9\\Components\\Pages\\CoursePages\\Details.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-05T23:04:00.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Edit.razor",
+              "DocumentMoniker": "C:\\Users\\Siraj\\source\\repos-git\\ETMS-Blazor-Core9\\ETMS-Blazor-DotNetCore9\\ETMS-Blazor9\\ETMS-Blazor9\\Components\\Pages\\CoursePages\\Edit.razor",
+              "RelativeDocumentMoniker": "ETMS-Blazor9\\Components\\Pages\\CoursePages\\Edit.razor",
+              "ToolTip": "C:\\Users\\Siraj\\source\\repos-git\\ETMS-Blazor-Core9\\ETMS-Blazor-DotNetCore9\\ETMS-Blazor9\\ETMS-Blazor9\\Components\\Pages\\CoursePages\\Edit.razor",
+              "RelativeToolTip": "ETMS-Blazor9\\Components\\Pages\\CoursePages\\Edit.razor",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAQwGwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-05T23:03:25.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Siraj\\source\\repos-git\\ETMS-Blazor-Core9\\ETMS-Blazor-DotNetCore9\\ETMS-Blazor9\\ETMS-Blazor9\\Components\\Pages\\CoursePages\\Index.razor",
+              "RelativeDocumentMoniker": "ETMS-Blazor9\\Components\\Pages\\CoursePages\\Index.razor",
+              "ToolTip": "C:\\Users\\Siraj\\source\\repos-git\\ETMS-Blazor-Core9\\ETMS-Blazor-DotNetCore9\\ETMS-Blazor9\\ETMS-Blazor9\\Components\\Pages\\CoursePages\\Index.razor",
+              "RelativeToolTip": "ETMS-Blazor9\\Components\\Pages\\CoursePages\\Index.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-05T23:03:17.238Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

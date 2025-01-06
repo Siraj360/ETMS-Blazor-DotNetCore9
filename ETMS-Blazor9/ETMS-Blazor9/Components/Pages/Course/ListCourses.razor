@@ -1,0 +1,55 @@
+﻿@page "/course-performance"
+@inject ICourseService CourseService
+@inject IEmployeeCourseService EmployeeCourseService
+@using ETMS_Blazor9.Components.shared
+@rendermode InteractiveServer
+@code
+{
+    int cx = 1;
+}
+<PageTitle>ETMS : Training Course Performance</PageTitle>
+<div class="row mb-2 border-bottom my-2">
+    <div class="col-md-8">
+        <h4>Training Course Performance</h4>
+    </div>
+    <div class="col-md-4">
+        @* <a class="btn btn-dark btn-sm float-right" href="/addcourse">Create New Course</a> *@
+    </div>
+</div>
+
+@if (courses == null)
+{
+    <Loader />
+}
+else
+{
+    <table class='table table-sm table-borderless'>
+        <tbody>
+            @foreach (var course in courses)
+            {
+                string courceId = course.CourseID.ToString();
+
+                <CourseInfo cx="@cx" courseId="@courceId"></CourseInfo>
+
+                cx++;
+
+            }
+        </tbody>
+    </table>
+}
+
+<br />
+<br />
+
+@code {
+
+    List<Course> courses;
+
+    protected override async Task OnInitializedAsync()
+    {
+        int cx = 1;
+        courses = await CourseService.GetCourses();
+    }
+
+
+}

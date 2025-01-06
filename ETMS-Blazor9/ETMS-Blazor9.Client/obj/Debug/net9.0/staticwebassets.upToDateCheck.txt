@@ -1,0 +1,4 @@
+C:\Users\Siraj\source\repos-git\ETMS-Blazor-Core9\ETMS-Blazor-DotNetCore9\ETMS-Blazor9\ETMS-Blazor9.Client\wwwroot\appsettings.json
+C:\Users\Siraj\source\repos-git\ETMS-Blazor-Core9\ETMS-Blazor-DotNetCore9\ETMS-Blazor9\ETMS-Blazor9.Client\wwwroot\appsettings.Development.json
+wwwroot\appsettings.Development.json
+wwwroot\appsettings.json

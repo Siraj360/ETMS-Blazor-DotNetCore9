@@ -1,0 +1,71 @@
+﻿@page "/employee-admin"
+@using Microsoft.EntityFrameworkCore
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using ETMS.Data
+@implements IAsyncDisposable
+@inject IDbContextFactory<ETMSContext> DbFactory
+@rendermode InteractiveServer
+
+<PageTitle>Employee Admin</PageTitle>
+
+<div class="row mb-2 border-bottom py-1">
+    <div class="col-md-8">
+        <h4>Employee Admin</h4>
+    </div>
+    <div class="col-md-4">
+        <a type="button" class="btn btn-dark btn-sm float-end mb-2" href="/employees/create"><span class="oi oi-plus me-2"></span>Create New Employee</a>
+    </div>
+</div>
+
+
+<QuickGrid Class="table" Items="context.Employee">
+    <PropertyColumn Property="employee => employee.EmployeeID" Sortable="true" />
+    @* <PropertyColumn Property="employee => employee.RowId" /> *@
+    <PropertyColumn Property="employee => employee.HireDate" Format="dd MMM yy" Sortable="true"/>
+    <PropertyColumn Property="employee => employee.Name" Sortable="true" />
+
+    <TemplateColumn Context="employee">
+        <a class="btn btn-sm btn-info me-2" href="@($"employees/edit?employeeid={employee.EmployeeID}")"><span class="oi oi-pencil me-2"></span>Edit</a> 
+        @* <a href="@($"employees/details?employeeid={employee.EmployeeID}")">Details</a> | *@
+        <a class="btn btn-sm btn-danger" href="@($"employees/delete?employeeid={employee.EmployeeID}")"><span class="oi oi-trash me-2"></span> Delete</a>
+    </TemplateColumn>
+</QuickGrid>
+
+@code {
+    private ETMSContext context = default!;
+
+
+    // protected override async Task OnInitializedAsync()
+    // {
+
+    //     Random rand = new Random();
+
+    //     foreach (Employee employee in context.Employee)
+    //     {
+
+    //         for (int i = 0; i <= 4; i++)
+    //         {
+    //             int randomInt = rand.Next(1, 9);
+    //             EmployeeCourse employeeCourse = new EmployeeCourse();
+    //             employeeCourse.EmployeeID = employee.EmployeeID;
+    //             employeeCourse.isComplete = false;
+    //             employeeCourse.CourseID = randomInt;
+    //             context.EmployeeCourse.Add(employeeCourse);
+        
+
+    //         }
+
+
+    //     }
+    //     await context.SaveChangesAsync();
+    // }
+
+
+    protected override void OnInitialized()
+    {
+        context = DbFactory.CreateDbContext();
+
+    }
+
+    public async ValueTask DisposeAsync() => await context.DisposeAsync();
+}

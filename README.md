@@ -18,6 +18,6 @@ I have been developing new features, adding new components, enhancing existing c
 
 ![alt tag](https://github.com/Siraj360/ETMS-Blazor-DotNetCore9/blob/main/ETMS-Blazor9/ETMS-Blazor9/wwwroot/images/CourseAdmin.png)
 
-  #### Dashbord Screen with KPI
+  #### Dashboard Screen with KPI
 
 ![alt tag](https://github.com/Siraj360/ETMS-Blazor-DotNetCore9/blob/main/ETMS-Blazor9/ETMS-Blazor9/wwwroot/images/Dashboard.png)

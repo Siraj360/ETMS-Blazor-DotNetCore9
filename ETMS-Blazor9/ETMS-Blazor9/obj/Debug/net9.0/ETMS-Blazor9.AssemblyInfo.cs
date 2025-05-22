@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ETMS-Blazor9")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a213c8037a6a761110dff880ac8ec187c4c7df3d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c625c63ee08220f5abb49e675e6b341205cd3929")]
 [assembly: System.Reflection.AssemblyProductAttribute("ETMS-Blazor9")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ETMS-Blazor9")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
